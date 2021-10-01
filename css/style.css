@@ -7,6 +7,7 @@
     --background-section: #F5F4FA;
     --section-color: #2F303A;
     --border-color: #EEEEEE;
+    --icon-color: #AFB1B8;
     }
 p,
 h1,
@@ -80,9 +81,7 @@ text-decoration: none;
 .header-nav {
     display: flex;
     padding: 0;
-    align-items: center;
-    margin-right: 330px;
-    
+    align-items: center;    
 }
 
 .header-logo {
@@ -123,12 +122,16 @@ text-decoration: none;
 }
 .header-contact-list {
     display: flex;
+    align-items: center;
+    margin-left: auto;
 }
 .header-item-contact:not(:last-child) {
     margin-right: 50px;
 }
 
 .header-link-contakt {
+    display: flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -136,6 +139,13 @@ text-decoration: none;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+}
+.header-svg {
+    fill: var(--primary-text-color);
+    margin-right: 10px;
+}
+.header-link-contakt:hover .header-svg {
+    fill: var(--accent-color);
 }
 .section-title-two {
     display: block;
@@ -332,6 +342,40 @@ margin-right: 30px;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);  
 }
+.soc-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+.soc-item {
+    margin-right: 10px;
+}
+.soc-item:last-child {
+    margin-right: 0;
+}
+.soc-link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--icon-color);
+    align-items: center;
+    justify-content: center;
+}
+.svg-soc {
+    display: flex;
+    fill: var(--icon-color);
+    
+}
+.soc-link:focus,
+.soc-link:hover {
+    background-color: var(--accent-color);
+}
+.svg-soc:focus,
+.svg-soc:hover {
+    fill: var(--lite-text-color)
+}
 
 /*------------Portfolio-------------*/
 
@@ -376,7 +420,7 @@ margin-right: 30px;
     box-shadow: 2px 0px 2px rgba(0, 0, 0, 0.12), 2px 0px 1px rgba(0, 0, 0, 0.08), 1px 0px 3px rgba(0, 0, 0, 0.1);
     border-radius: 0px 0px 4px 4px;
 }
-.current {
+.pcurrent {
     background-color: var(--accent-color);
     color: var(--lite-text-color);
     border: 0;
